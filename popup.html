@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>LinkedInSight</title>
+  <script defer src="popup.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1b1f23;
+      color: #f0f2f5;
+      padding: 20px;
+      width: 320px;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #00b8ff;
+      text-align: center;
+    }
+
+    .field {
+      margin-top: 20px;
+    }
+
+    label, input[type="number"] {
+      display: block;
+      margin-top: 5px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      background: #2c3136;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+    }
+
+    .checkboxes {
+      margin-top: 15px;
+    }
+
+    .checkboxes label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background-color: #00b8ff;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0093cc;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>LinkedInView</h1>
+
+  <div class="field">
+    <label for="numOfElements">Number of connections to export</label>
+    <input id="numOfElements" type="number" placeholder="e.g. 50">
+  </div>
+
+  <div class="field checkboxes">
+    <label><input id="firstNameCheckbox" type="checkbox" checked /> First Name</label>
+    <label><input id="lastNameCheckbox" type="checkbox" checked /> Last Name</label>
+    <label><input id="jobCheckBox" type="checkbox" checked /> Job Title</label>
+  </div>
+
+  <button id="getElements">Get Connections</button>
+  <a id="csvDownloadLink"><button id="csvDownloadButton">Export to CSV</button></a>
+</body>
+</html>
